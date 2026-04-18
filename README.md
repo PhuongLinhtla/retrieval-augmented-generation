@@ -66,7 +66,7 @@ rag_project/
 There are no automated tests included by default. Add tests under a tests/ folder and run with pytest.
 
 ## Git / .env Hygiene
-.env and virtual environment directories are intentionally excluded from version control. See .gitignore.
+- .env and virtual environment directories are intentionally excluded from version control. See .gitignore.
 
 ## License
 This repository is for educational purposes. Add a LICENSE file if needed.
