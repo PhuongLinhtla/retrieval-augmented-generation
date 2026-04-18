@@ -42,7 +42,7 @@ Common variables used in this project:
 
 Adjust configuration in your application files as needed.
 
-## 📁 Project Layout
+## Project Layout
 
 ```text
 rag_project/
@@ -56,6 +56,7 @@ rag_project/
 ├── requirements.txt         # Python dependencies
 ├── .env                     # Environment variables (API keys, etc.)
 └── README.md
+```
 
 ## Development notes
 - The core logic is implemented in the RAG pipeline (`app/rag_pipeline.py`), including embedding, vector retrieval, and response generation.
