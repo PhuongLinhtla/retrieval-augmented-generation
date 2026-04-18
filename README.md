@@ -42,8 +42,9 @@ Common variables used in this project:
 
 Adjust configuration in your application files as needed.
 
-## Project Layout
+## 📁 Project Layout
 
+```text
 rag_project/
 ├── app/                     # Application code (FastAPI + RAG pipeline)
 │   ├── main.py              # FastAPI app & WebSocket chat endpoint
