@@ -30,8 +30,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--provider",
-        default="local",
-        choices=["local", "openai", "gemini"],
+        default="ollama",
+        choices=["local", "ollama", "openai", "gemini"],
         help="LLM provider used when asking questions.",
     )
 
@@ -52,6 +52,7 @@ def main() -> None:
     print("Ingestion summary")
     print("- Indexed files:", summary["indexed_files"])
     print("- Indexed chunks:", summary["indexed_chunks"])
+    print("- Indexed parent chunks:", summary.get("indexed_parent_chunks", 0))
     print("- Skipped files:", summary["skipped_files"])
     print("- Failed files:", summary["failed_files"])
     print("- Total chunks in DB:", summary.get("total_chunks_in_db", 0))

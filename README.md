@@ -1,208 +1,157 @@
-<<<<<<< HEAD
-# RAG Learning Assistant (Đề tài 9)
+# RAG Learning Assistant (Toi uu cho tieng Viet va 6GB VRAM)
 
-Hệ thống RAG (Retrieval-Augmented Generation) cho trợ lý học tập:
-- Nhúng tài liệu PDF/TXT/MD bằng SentenceTransformers.
-- Lưu metadata + vector vào SQLite.
-- Dùng ANN + cosine similarity để truy xuất ngữ cảnh (context).
-  - Ưu tiên backend HNSW (hnswlib) khi sẵn sàng.
-  - Tự động fallback sang ANN-LSH nếu hnswlib không khả dụng (thường gặp trên Windows khi thiếu C++ Build Tools).
-- Lấy top-3 ngữ cảnh có ý nghĩa gần nhất.
-- Có giao diện chat và khối Nguồn tham khảo (Context) bên dưới mỗi câu trả lời.
-- Hỗ trợ OpenAI/Gemini để tạo câu trả lời bám sát dữ liệu nội bộ (grounded answer).
+He thong RAG nay duoc toi uu de chay on dinh tren may GPU nho (khoang 6GB VRAM), uu tien tai lieu tieng Viet va hoc tap noi bo.
 
-## 1) Kiến trúc
+## 0) Accuracy-first architecture (ban nang cap)
 
-- Thu nạp dữ liệu (Ingestion):
-  1. Đọc file PDF/TXT/MD.
-  2. Chia đoạn (chunking) có overlap.
-  3. Nhúng từng chunk bằng SentenceTransformers.
-  4. Lưu chunk + vector vào SQLite.
-  5. Rebuild ANN index (HNSW hoặc LSH fallback) từ vector trong DB.
+He thong da nang cap theo huong tang do chinh xac:
 
-- Truy xuất (Retrieval - RAG):
-  1. Nhúng câu hỏi.
-  2. Tìm kiếm ANN theo cosine trong HNSW hoặc LSH fallback.
-  3. Hybrid rerank = semantic similarity + lexical overlap.
-  4. MMR selection để chọn top-3 ngữ cảnh đa dạng, giảm trùng lặp.
+- Chunking 2 tang child-parent theo token budget.
+- Hybrid retrieval (Dense + BM25) va RRF fusion.
+- Reranker cross-encoder (co fallback neu khong kha dung).
+- Evidence compression sentence-level (tuy chon).
+- Confidence gate: khi do tin cay thap se hoi lam ro thay vi doan.
+- Prompt 2-pass: facts truoc, tong hop sau, bat buoc citation.
 
-- Sinh câu trả lời (Generation):
-  1. Đưa top-3 ngữ cảnh vào prompt.
-  2. Gọi OpenAI/Gemini (nếu có API key) hoặc local synthesis fallback.
-  3. Ép trả lời dựa trên context; nếu thiếu dữ liệu thì nêu rõ.
+Tai lieu thiet ke chi tiet:
 
-## 2) Cấu trúc thư mục
+- `docs/RAG_Accuracy_First_Design_vi.md`
 
-- app.py: Giao diện chatbot Streamlit + truy vết nguồn.
-- ingest_cli.py: CLI để ingest tài liệu.
-- rag/config.py: Biến môi trường và tham số hệ thống.
-- rag/text_processing.py: Parser + chunking.
-- rag/repository.py: SQLite metadata + vector.
-- rag/vector_store.py: ANN index (HNSW + LSH fallback).
-- rag/retriever.py: Truy xuất + rerank + MMR.
-- rag/llm_clients.py: OpenAI/Gemini/local grounded answer.
-- rag/pipeline.py: Điều phối end-to-end.
-- storage/: SQLite DB + HNSW index.
-- documents/: Đặt tài liệu nội bộ để index.
+## 1) Chien luoc model cho 6GB VRAM
 
-## 3) Cài đặt
+- LLM uu tien #1 (chat): Ollama + Qwen 2.5 14B Instruct (GGUF Q4).
+  - Goi y: `qwen2.5:14b-instruct-q4_K_M`
+  - Muc tieu: tang chat luong tong hop/giai thich khi retrieval tot.
+- Neu OOM hoac qua cham: fallback xuong Llama 3.1 8B Instruct.
+  - Goi y: `llama3.1:8b-instruct-q5_K_M`
+  - Muc tieu: chay muot hon, giu duoc context cao hon tren may 12GB.
+- Vision model (doc anh/bieu do): Ollama + Moondream hoac Qwen2-VL 2B.
+  - Mac dinh: `moondream`
+- Embedding model:
+  - Nhanh/nhẹ, da tot cho tieng Viet: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
+  - Neu muon dong bo qua Ollama: `nomic-embed-text`
 
-1. Tạo và kích hoạt virtual environment (khuyến nghị).
-2. Cài package:
+## 2) Engine van hanh
 
-   pip install -r requirements.txt
+- Uu tien Ollama (llama.cpp) thay vi vLLM cho may nho.
+- Ollama thuong quan ly bo nho on dinh hon tren may RAM/VRAM han che.
 
-   Trên Windows, hnswlib được đặt ở chế độ optional để tránh lỗi build C++.
-   Hệ thống vẫn chạy ANN bằng backend LSH fallback.
+## 3) Pipeline tach 2 pha (rat quan trong)
 
-3. Tạo file .env từ .env.example và điền API key nếu cần:
+### Pha 1 - Ingestion offline
+Chi chay khi can nap tai lieu moi:
 
-   - LLM_PROVIDER=local | openai | gemini
-   - OPENAI_API_KEY=...
-   - GEMINI_API_KEY=...
+- Trich xuat text tu PDF/TXT/MD/PPTX.
+- Co the doc anh/bieu do bang vision model (Moondream) va chuyen thanh text.
+- Tao embedding va luu vao DB/index.
 
-4. Bật secret guard trước khi push lên GitHub:
+Script da co:
 
-   - Sau khi `git init`, chạy:
+- `scripts/phase1_ingest_offline.py`
 
-     powershell -ExecutionPolicy Bypass -File scripts/setup_git_hooks.ps1
+### Pha 2 - Chat realtime
+Chi chay luc ban ngoi hoc hoi dap:
 
-   - Hook `pre-commit` và `pre-push` sẽ quét secret trong file và chặn commit/push nếu phát hiện key/token.
-   - Không bao giờ commit file `.env`. Chỉ commit `.env.example`.
+- Bat model chat Qwen qua Ollama.
+- Retrieval doc chunk tu SQLite + ANN index (CPU/RAM).
+- Sinh cau tra loi tieng Viet co kem nguon.
 
-## 4) Chạy hệ thống
+Script da co:
 
-- Chạy UI Streamlit:
+- `scripts/phase2_chat_serve.py`
 
-  streamlit run app.py
+## 4) Cau hinh .env
 
-- Trong sidebar:
-  - Upload file PDF/TXT/MD và bấm Embed uploaded files.
-  - Hoặc bấm Index documents folder để index toàn bộ thư mục documents.
+Tham khao file `.env.example`.
 
-- Chat:
-  - Đặt câu hỏi trong khung chat.
-  - Bên dưới mỗi câu trả lời của bot có khối Nguồn tham khảo (Context) để click mở.
-  - Khối này hiển thị:
-    - Nguồn file/trang
-    - Điểm tương đồng (similarity score)
-    - Đoạn văn bản gốc truy xuất từ DB
+Gia tri mac dinh cho 6GB:
 
-## 5) Chạy ingest bằng CLI
+- `LLM_PROVIDER=ollama`
+- `OLLAMA_LLM_MODEL=qwen2.5:14b-instruct-q4_K_M`
+- `OLLAMA_FALLBACK_MODEL=llama3.1:8b-instruct-q5_K_M`
+- `OLLAMA_VISION_MODEL=moondream`
+- `EMBEDDING_BACKEND=sentence_transformers`
+- `EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
+- `OLLAMA_EMBED_MODEL=nomic-embed-text`
+- `OLLAMA_NUM_CTX=8192`
+- `EVIDENCE_MIN_TOKENS=1500` va `EVIDENCE_MAX_TOKENS=3000`
+- `EVIDENCE_CHUNK_MIN=6` va `EVIDENCE_CHUNK_MAX=10`
+- `OLLAMA_TEMPERATURE=0.0-0.2`
 
-- Index file/thư mục cụ thể:
+## 5) Cai dat
 
-  python ingest_cli.py documents
+1. Tao va kich hoat venv cua ban.
+2. Cai package:
 
-- Hoặc:
+   `pip install -r requirements.txt`
 
-  python ingest_cli.py path_to_file.pdf path_to_folder
+3. Cai Ollama va pull model:
 
-## 6) Tùy chỉnh và tối ưu
+  `ollama pull qwen2.5:14b-instruct-q4_K_M`
 
-Trong file .env:
-- CHUNK_SIZE: Kích thước chunk.
-- CHUNK_OVERLAP: Độ overlap giữa các chunk.
-- ANN_CANDIDATES: Số ứng viên ANN ban đầu.
-- TOP_K: Số context sau cùng (mặc định 3).
-- MIN_SIMILARITY: Ngưỡng lọc context yếu.
-- MMR_LAMBDA: Cân bằng relevance và diversity.
+  `ollama pull llama3.1:8b-instruct-q5_K_M`
 
-## 7) Cải tiến thuật toán đã áp dụng
+   `ollama pull moondream`
 
-- ANN HNSW cho tìm kiếm vector nhanh trên dữ liệu lớn.
-- Cosine similarity trên embedding đã normalize.
-- Hybrid rerank semantic + lexical để tăng độ chính xác.
-- MMR để giảm trùng lặp context, tăng độ bao phủ thông tin.
-- Prompt grounding bắt buộc dựa trên context, giảm hallucination.
-- Fallback local synthesis khi API bên ngoài không sẵn sàng.
+   `ollama pull nomic-embed-text`
 
-## 8) Lưu ý
+## 6) Chay theo 2 pha
 
-- Dữ liệu tham khảo hiển thị trực tiếp từ chunk trong DB.
-- LLM có thể fallback local nếu API key không hợp lệ.
-- Nên dùng model embedding đa ngôn ngữ (multilingual) cho tài liệu tiếng Việt.
-- Nếu muốn bật HNSW trên Windows, cài Microsoft C++ Build Tools rồi chạy thêm: pip install hnswlib
+### Pha 1 - Nap du lieu offline
 
-## 9) Khắc phục sự cố (Troubleshooting)
+Mac dinh ingest thu muc `documents`:
 
-- Lỗi ModuleNotFoundError: No module named 'torchvision' khi chạy Streamlit:
-  - Nguyên nhân: Streamlit file watcher quét lazy modules của transformers (không phải lỗi logic RAG).
-  - Cấu hình đã được đặt sẵn trong [.streamlit/config.toml](.streamlit/config.toml) với `fileWatcherType = "none"`.
-  - Nếu đang chạy app cũ, hãy dừng server và chạy lại để áp dụng cấu hình mới.
-=======
-rag_project/ ├── app/ │ ├── __init__.py │ ├── main.py │ # FastAPI entry point & WebSocket chat endpoint
-## retrieval-augmented-generation
-A small FastAPI-based RAG chatbot system with vector search integration.
- It provides a WebSocket-based chat interface, processes user queries by generating embeddings, retrieves the most relevant text chunks using vector similarity search, and returns responses with source context and similarity scores.
+`python scripts/phase1_ingest_offline.py`
 
-## Features
- - FastAPI WebSocket endpoint for real-time chatbot interaction
- - Embedding generation using SentenceTransformers
- - Vector similarity search to retrieve top-k relevant text chunks
- - RAG pipeline combining retrieval and response generation
- - Source tracing with similarity scores for each response
- - Lightweight demo frontend for chat interaction
+Ingest duong dan cu the:
 
-## Quickstart (local)
- 1.Create and activate a virtual environment:
-    python3 -m venv .venv source .venv/bin/activate  
+`python scripts/phase1_ingest_offline.py documents my_slide.pptx my_file.pdf`
 
- 2.Install dependencies:
-     pip install -r requirements.txt  
+Tat vision neu muon nhanh hon:
 
- 3.Provide environment variables (see section below) in a .env file or your shell.
+`python scripts/phase1_ingest_offline.py --disable-vision`
 
- 4.Start services with Docker Compose (optional for local development):
- docker-compose up -d
- This can be used to run supporting services such as a vector database or API backend if configured in docker-compose.yml.
+Tich hop Marker/Nougat (tuy chon) qua command template:
 
- Run the FastAPI app:
- uvicorn app.main:app --reload --host 0.0.0.0 --port 8000  
- Connect to the WebSocket endpoint:
- ws://localhost:8000/ws  
- Use a simple frontend or WebSocket client to send queries and receive responses with context and similarity scores.
+`python scripts/phase1_ingest_offline.py --marker-cmd "marker_single {input} --output_dir {output_dir}"`
 
-## Environment variables
-Keep sensitive values out of source control (use `.env` and `.gitignore`).
+`python scripts/phase1_ingest_offline.py --nougat-cmd "nougat {input} -o {output_dir}"`
 
-Common variables used in this project:
+### Pha 2 - Chat realtime
 
-- VECTOR_DB_API_KEY - API key for vector database (e.g., Pinecone)
-- VECTOR_DB_ENV - Environment/region for vector database
-- OPENAI_API_KEY - API key for LLM (optional)
-- APP_ENV - Application environment (development | production)
+`python scripts/phase2_chat_serve.py --port 8511`
 
-Adjust configuration in your application files as needed.
+Sau do mo trinh duyet:
 
-## Project Layout
+`http://localhost:8511`
 
-```text
-rag_project/
-├── app/                     # Application code (FastAPI + RAG pipeline)
-│   ├── main.py              # FastAPI app & WebSocket chat endpoint
-│   ├── rag_pipeline.py      # Core RAG logic (embedding + retrieval + response)
-│   ├── embedding.py         # Text embedding using SentenceTransformers
-│   ├── vector_db.py         # Vector search (e.g., Pinecone / Milvus)
-│   ├── models/              # (Optional) Pydantic schemas
-│   └── services/            # (Optional) data processing / helpers
-├── requirements.txt         # Python dependencies
-├── .env                     # Environment variables (API keys, etc.)
-└── README.md
-```
+## 7) Chay truc tiep bang Streamlit
 
-## Development notes
-- The core logic is implemented in the RAG pipeline (`app/rag_pipeline.py`), including embedding, vector retrieval, and response generation.
-- Vector search is handled in `app/vector_db.py` (can be integrated with Pinecone or Milvus).
-- Embedding is generated using SentenceTransformers (`app/embedding.py`).
-- A simple WebSocket-based chat interface is provided via FastAPI.
+Neu khong dung script pha 2, co the chay truc tiep:
 
-## Testing
-There are no automated tests included by default. Add tests under a tests/ folder and run with pytest.
+`python -m streamlit run app.py --server.port 8511`
 
-## Git / .env Hygiene
-- .env and virtual environment directories are intentionally excluded from version control. See .gitignore.
+## 8) Kha nang tieng Viet da ap dung
 
-## License
-This repository is for educational purposes. Add a LICENSE file if needed.
->>>>>>> d85ee869468c36146a66be379af217e0942f7569
+- Embedding da uu tien model multilingual cho tieng Viet.
+- Retrieval lexical da them chuan hoa bo dau (khong dau/co dau) de match tot hon.
+- Prompt generation uu tien cau tra loi tieng Viet va trace nguon.
+
+## 9) Cau truc chinh
+
+- `app.py`: giao dien Streamlit.
+- `ingest_cli.py`: ingest co ban.
+- `scripts/phase1_ingest_offline.py`: pha 1 offline.
+- `scripts/phase2_chat_serve.py`: pha 2 chat.
+- `rag/ollama_http.py`: client Ollama cho generate/embed/vision.
+- `rag/embedding_service.py`: embedding backend `sentence_transformers` hoac `ollama`.
+- `rag/llm_clients.py`: provider `ollama|openai|gemini|local`.
+- `rag/text_processing.py`: parser PDF/TXT/MD/PPTX + chunking.
+- `rag/retriever.py`: retrieval + rerank + MMR.
+- `rag/pipeline.py`: orchestration end-to-end.
+
+## 10) Luu y deploy
+
+- He thong hien la local web app (localhost), khong tu dong public internet.
+- Muon public cho nguoi ngoai truy cap, can deploy len cloud (Streamlit Community Cloud/Render/VPS).
+- Khong commit `.env` va API key.
