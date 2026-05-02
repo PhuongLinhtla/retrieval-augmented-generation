@@ -1,0 +1,309 @@
+{
+  "Chapter 1: Functions and Graphs<SEP>Table of Contents": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 1: Functions and Graphs<SEP>Table of Contents"
+  },
+  "Chapter 2: Limits<SEP>Table of Contents": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 2: Limits<SEP>Table of Contents"
+  },
+  "1.1 Review of Functions<SEP>Chapter 1: Functions and Graphs": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "1.1 Review of Functions<SEP>Chapter 1: Functions and Graphs"
+  },
+  "1.2 Basic Classes of Functions<SEP>Chapter 1: Functions and Graphs": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "1.2 Basic Classes of Functions<SEP>Chapter 1: Functions and Graphs"
+  },
+  "2.1 A Preview of Calculus<SEP>Chapter 2: Limits": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "2.1 A Preview of Calculus<SEP>Chapter 2: Limits"
+  },
+  "1.3 Trigonometric Functions<SEP>Chapter 1: Functions and Graphs": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "1.3 Trigonometric Functions<SEP>Chapter 1: Functions and Graphs"
+  },
+  "2.2 The Limit of a Function<SEP>Chapter 2: Limits": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "2.2 The Limit of a Function<SEP>Chapter 2: Limits"
+  },
+  "Noah Carter<SEP>World Athletics Federation": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235",
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 2,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Noah Carter<SEP>World Athletics Federation"
+  },
+  "1.4 Inverse Functions<SEP>Chapter 1: Functions and Graphs": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "1.4 Inverse Functions<SEP>Chapter 1: Functions and Graphs"
+  },
+  "Chapter 3: Derivatives<SEP>Derivative": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 3: Derivatives<SEP>Derivative"
+  },
+  "2.3 The Limit Laws<SEP>Chapter 2: Limits": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "2.3 The Limit Laws<SEP>Chapter 2: Limits"
+  },
+  "Chapter 4: Applications of Derivatives<SEP>Related Rates": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 4: Applications of Derivatives<SEP>Related Rates"
+  },
+  "1.5 Exponential and Logarithmic Functions<SEP>Chapter 1: Functions and Graphs": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "1.5 Exponential and Logarithmic Functions<SEP>Chapter 1: Functions and Graphs"
+  },
+  "2.4 Continuity<SEP>Chapter 2: Limits": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "2.4 Continuity<SEP>Chapter 2: Limits"
+  },
+  "Chapter 4: Applications of Derivatives<SEP>Linear Approximations and Differentials": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 4: Applications of Derivatives<SEP>Linear Approximations and Differentials"
+  },
+  "Chapter 6: Applications of Integration<SEP>Integral Calculus": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 6: Applications of Integration<SEP>Integral Calculus"
+  },
+  "Carbon-Fiber Spikes<SEP>World Athletics Federation": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Carbon-Fiber Spikes<SEP>World Athletics Federation"
+  },
+  "Areas between Curves<SEP>Chapter 6: Applications of Integration": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Areas between Curves<SEP>Chapter 6: Applications of Integration"
+  },
+  "2.5 The Precise Definition of a Limit<SEP>Chapter 2: Limits": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "2.5 The Precise Definition of a Limit<SEP>Chapter 2: Limits"
+  },
+  "Chapter 6: Applications of Integration<SEP>Volumes by Slicing": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 6: Applications of Integration<SEP>Volumes by Slicing"
+  },
+  "Chapter 6: Applications of Integration<SEP>Volumes of Revolution: Cylindrical Shells": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 6: Applications of Integration<SEP>Volumes of Revolution: Cylindrical Shells"
+  },
+  "Appendix A: Table of Integrals<SEP>Book": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Appendix A: Table of Integrals<SEP>Book"
+  },
+  "Arc Length of a Curve and Surface Area<SEP>Chapter 6: Applications of Integration": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Arc Length of a Curve and Surface Area<SEP>Chapter 6: Applications of Integration"
+  },
+  "Chapter 6: Applications of Integration<SEP>Physical Applications": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 6: Applications of Integration<SEP>Physical Applications"
+  },
+  "Appendix B: Table of Derivatives<SEP>Book": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Appendix B: Table of Derivatives<SEP>Book"
+  },
+  "Chapter 6: Applications of Integration<SEP>Moments and Centers of Mass": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 6: Applications of Integration<SEP>Moments and Centers of Mass"
+  },
+  "World Athletics Championship<SEP>World Athletics Federation": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "World Athletics Championship<SEP>World Athletics Federation"
+  },
+  "Appendix C: Review of Pre-Calculus<SEP>Book": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Appendix C: Review of Pre-Calculus<SEP>Book"
+  },
+  "Carbon-Fiber Spikes Manufacturer<SEP>Noah Carter": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Carbon-Fiber Spikes Manufacturer<SEP>Noah Carter"
+  },
+  "Chapter 6: Applications of Integration<SEP>Integrals, Exponential Functions, and Logarithms": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 6: Applications of Integration<SEP>Integrals, Exponential Functions, and Logarithms"
+  },
+  "Book<SEP>Index": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Book<SEP>Index"
+  },
+  "Chapter 6: Applications of Integration<SEP>Exponential Growth and Decay": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Chapter 6: Applications of Integration<SEP>Exponential Growth and Decay"
+  },
+  "Carbon-Fiber Spikes Manufacturer<SEP>World Athletics Championship": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Carbon-Fiber Spikes Manufacturer<SEP>World Athletics Championship"
+  },
+  "Calculus of the Hyperbolic Functions<SEP>Chapter 6: Applications of Integration": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Calculus of the Hyperbolic Functions<SEP>Chapter 6: Applications of Integration"
+  }
+}

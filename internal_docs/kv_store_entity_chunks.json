@@ -1,0 +1,464 @@
+{
+  "Table of Contents": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "Table of Contents"
+  },
+  "Preface": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "Preface"
+  },
+  "Chapter 1: Functions and Graphs": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "Chapter 1: Functions and Graphs"
+  },
+  "1.1 Review of Functions": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "1.1 Review of Functions"
+  },
+  "1.2 Basic Classes of Functions": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "1.2 Basic Classes of Functions"
+  },
+  "1.3 Trigonometric Functions": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "1.3 Trigonometric Functions"
+  },
+  "1.4 Inverse Functions": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "1.4 Inverse Functions"
+  },
+  "1.5 Exponential and Logarithmic Functions": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "1.5 Exponential and Logarithmic Functions"
+  },
+  "Chapter 2: Limits": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737826,
+    "update_time": 1777737826,
+    "_id": "Chapter 2: Limits"
+  },
+  "2.1 A Preview of Calculus": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "2.1 A Preview of Calculus"
+  },
+  "2.2 The Limit of a Function": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "2.2 The Limit of a Function"
+  },
+  "2.3 The Limit Laws": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "2.3 The Limit Laws"
+  },
+  "2.4 Continuity": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "2.4 Continuity"
+  },
+  "2.5 The Precise Definition of a Limit": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "2.5 The Precise Definition of a Limit"
+  },
+  "Chapter 3: Derivatives": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235",
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 2,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Chapter 3: Derivatives"
+  },
+  "World Athletics Federation": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235",
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa",
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 3,
+    "update_time": 1777737830,
+    "_id": "World Athletics Federation"
+  },
+  "Data": {
+    "chunk_ids": [
+      "chunk-6c76f2d7edb4ee3f72db5bba7f334f37"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Data"
+  },
+  "Derivative": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Derivative"
+  },
+  "Chapter 4: Applications of Derivatives": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Chapter 4: Applications of Derivatives"
+  },
+  "Related Rates": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Related Rates"
+  },
+  "Linear Approximations and Differentials": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Linear Approximations and Differentials"
+  },
+  "Maxima and Minima": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Maxima and Minima"
+  },
+  "Mean Value Theorem": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Mean Value Theorem"
+  },
+  "Derivatives and the Shape of a Graph": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Derivatives and the Shape of a Graph"
+  },
+  "Limits at Infinity and Asymptotes": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Limits at Infinity and Asymptotes"
+  },
+  "Applied Optimization Problems": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Applied Optimization Problems"
+  },
+  "L'Hôpitals Rule": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "L'Hôpitals Rule"
+  },
+  "Newtons Method": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Newtons Method"
+  },
+  "Antiderivatives": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Antiderivatives"
+  },
+  "Chapter 5: Integration": {
+    "chunk_ids": [
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Chapter 5: Integration"
+  },
+  "Integral Calculus": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Integral Calculus"
+  },
+  "Chapter 6: Applications of Integration": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Chapter 6: Applications of Integration"
+  },
+  "Areas between Curves": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Areas between Curves"
+  },
+  "Volumes by Slicing": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Volumes by Slicing"
+  },
+  "Volumes of Revolution: Cylindrical Shells": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737828,
+    "update_time": 1777737828,
+    "_id": "Volumes of Revolution: Cylindrical Shells"
+  },
+  "Arc Length of a Curve and Surface Area": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737829,
+    "update_time": 1777737829,
+    "_id": "Arc Length of a Curve and Surface Area"
+  },
+  "Physical Applications": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737829,
+    "update_time": 1777737829,
+    "_id": "Physical Applications"
+  },
+  "Moments and Centers of Mass": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737829,
+    "update_time": 1777737829,
+    "_id": "Moments and Centers of Mass"
+  },
+  "Integrals, Exponential Functions, and Logarithms": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737829,
+    "update_time": 1777737829,
+    "_id": "Integrals, Exponential Functions, and Logarithms"
+  },
+  "Exponential Growth and Decay": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737829,
+    "update_time": 1777737829,
+    "_id": "Exponential Growth and Decay"
+  },
+  "Calculus of the Hyperbolic Functions": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Calculus of the Hyperbolic Functions"
+  },
+  "Appendix A: Table of Integrals": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Appendix A: Table of Integrals"
+  },
+  "Appendix B: Table of Derivatives": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Appendix B: Table of Derivatives"
+  },
+  "Appendix C: Review of Pre-Calculus": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Appendix C: Review of Pre-Calculus"
+  },
+  "Index": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Index"
+  },
+  "The World Athletics Federation": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "The World Athletics Federation"
+  },
+  "Carbon-Fiber Spikes Manufacturer": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Carbon-Fiber Spikes Manufacturer"
+  },
+  "Noah Carter": {
+    "chunk_ids": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235",
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa",
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 3,
+    "update_time": 1777737830,
+    "_id": "Noah Carter"
+  },
+  "Carbon-Fiber Spikes": {
+    "chunk_ids": [
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Carbon-Fiber Spikes"
+  },
+  "Book": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "Book"
+  },
+  "World Athletics Championship": {
+    "chunk_ids": [
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6"
+    ],
+    "count": 1,
+    "create_time": 1777737830,
+    "update_time": 1777737830,
+    "_id": "World Athletics Championship"
+  }
+}

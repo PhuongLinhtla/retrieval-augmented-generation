@@ -1,0 +1,781 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d13" for="edge" attr.name="truncate" attr.type="string"/>
+<key id="d12" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d11" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d10" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d9" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d8" for="edge" attr.name="description" attr.type="string"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d6" for="node" attr.name="truncate" attr.type="string"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Table of Contents">
+  <data key="d0">Table of Contents</data>
+  <data key="d1">content</data>
+  <data key="d2">A comprehensive list of chapter topics and subtopics within the book.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="Preface">
+  <data key="d0">Preface</data>
+  <data key="d1">section</data>
+  <data key="d2">The introductory section providing background information about the book's content.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="Chapter 1: Functions and Graphs">
+  <data key="d0">Chapter 1: Functions and Graphs</data>
+  <data key="d1">chapter</data>
+  <data key="d2">The first chapter focusing on functions and their graphical representations.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="1.1 Review of Functions">
+  <data key="d0">1.1 Review of Functions</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 1 that reviews the essential concepts about functions.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="1.2 Basic Classes of Functions">
+  <data key="d0">1.2 Basic Classes of Functions</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 1 discussing different categories of functions.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="1.3 Trigonometric Functions">
+  <data key="d0">1.3 Trigonometric Functions</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 1 that focuses on trigonometric functions.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="1.4 Inverse Functions">
+  <data key="d0">1.4 Inverse Functions</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 1 that deals with inverse functions.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="1.5 Exponential and Logarithmic Functions">
+  <data key="d0">1.5 Exponential and Logarithmic Functions</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 1 that covers exponential and logarithmic functions.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="Chapter 2: Limits">
+  <data key="d0">Chapter 2: Limits</data>
+  <data key="d1">chapter</data>
+  <data key="d2">The second chapter dedicated to understanding limits.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737826</data>
+  <data key="d6"></data>
+</node>
+<node id="2.1 A Preview of Calculus">
+  <data key="d0">2.1 A Preview of Calculus</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 2 that provides an overview of calculus.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="2.2 The Limit of a Function">
+  <data key="d0">2.2 The Limit of a Function</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 2 discussing the limit of a function.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="2.3 The Limit Laws">
+  <data key="d0">2.3 The Limit Laws</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 2 that covers limit laws.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="2.4 Continuity">
+  <data key="d0">2.4 Continuity</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 2 dealing with continuity of functions.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="2.5 The Precise Definition of a Limit">
+  <data key="d0">2.5 The Precise Definition of a Limit</data>
+  <data key="d1">subsection</data>
+  <data key="d2">A subsection within Chapter 2 that presents the formal definition of a limit.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Chapter 3: Derivatives">
+  <data key="d0">Chapter 3: Derivatives</data>
+  <data key="d1">chapter</data>
+  <data key="d2">Chapter 3: Derivatives is a section of the text that focuses on understanding and calculating derivatives.&lt;SEP&gt;The third chapter focusing on derivatives.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235&lt;SEP&gt;chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="World Athletics Federation">
+  <data key="d0">World Athletics Federation</data>
+  <data key="d1">organization</data>
+  <data key="d2">The World Athletics Federation is the governing body responsible for setting rules, organizing competitions, and validating records in athletics.&lt;SEP&gt;The World Athletics Federation is the governing body responsible for validating athletic records such as the 100m sprint record.</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235&lt;SEP&gt;chunk-3bd1a15341e0fba9535b1e66d7550ffa&lt;SEP&gt;chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Data">
+  <data key="d0">Data</data>
+  <data key="d1">data</data>
+  <data key="d2">The input text contains a block of data consisting of various characters.</data>
+  <data key="d3">chunk-6c76f2d7edb4ee3f72db5bba7f334f37</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Derivative">
+  <data key="d0">Derivative</data>
+  <data key="d1">concept</data>
+  <data key="d2">The derivative is a mathematical concept used to analyze how a function changes as its input (independent variable) changes.</data>
+  <data key="d3">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Chapter 4: Applications of Derivatives">
+  <data key="d0">Chapter 4: Applications of Derivatives</data>
+  <data key="d1">event</data>
+  <data key="d2">Chapter 4: Applications of Derivatives is a section of the text that explores practical applications of derivatives.</data>
+  <data key="d3">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Related Rates">
+  <data key="d0">Related Rates</data>
+  <data key="d1">concept</data>
+  <data key="d2">Related Rates refers to a set of problems in calculus where rates are proportional to each other and need to be related to find an unknown variable.</data>
+  <data key="d3">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Linear Approximations and Differentials">
+  <data key="d0">Linear Approximations and Differentials</data>
+  <data key="d1">method</data>
+  <data key="d2">Linear Approximations and Differentials is a method used to approximate the behavior of functions near a specific point.</data>
+  <data key="d3">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Maxima and Minima">
+  <data key="d0">Maxima and Minima</data>
+  <data key="d1">concept</data>
+  <data key="d2">Maxima and Minima refer to the highest and lowest points of a function, respectively, which can be found using derivatives.</data>
+  <data key="d3">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Mean Value Theorem">
+  <data key="d0">Mean Value Theorem</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Mean Value Theorem is a mathematical concept discussed in the context of calculus.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Derivatives and the Shape of a Graph">
+  <data key="d0">Derivatives and the Shape of a Graph</data>
+  <data key="d1">concept</data>
+  <data key="d2">Derivatives and the Shape of a Graph is a mathematical concept related to calculus, graph analysis, and rate of change.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Limits at Infinity and Asymptotes">
+  <data key="d0">Limits at Infinity and Asymptotes</data>
+  <data key="d1">concept</data>
+  <data key="d2">Limits at Infinity and Asymptotes are mathematical concepts related to the behavior of functions at large values of their inputs.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Applied Optimization Problems">
+  <data key="d0">Applied Optimization Problems</data>
+  <data key="d1">concept</data>
+  <data key="d2">Applied Optimization Problems is a mathematical concept that applies optimization techniques to solve real-world problems.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="L'Hôpitals Rule">
+  <data key="d0">L'Hôpitals Rule</data>
+  <data key="d1">method</data>
+  <data key="d2">L'Hopital's Rule is a mathematical method used for solving indeterminate forms encountered during the evaluation of limits.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Newtons Method">
+  <data key="d0">Newtons Method</data>
+  <data key="d1">method</data>
+  <data key="d2">Newton's Method is an iterative technique used to find the root or solution of an equation.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Antiderivatives">
+  <data key="d0">Antiderivatives</data>
+  <data key="d1">concept</data>
+  <data key="d2">Antiderivatives are mathematical concepts related to integration and finding inverse functions.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Chapter 5: Integration">
+  <data key="d0">Chapter 5: Integration</data>
+  <data key="d1">event</data>
+  <data key="d2">Chapter 5: Integration is a topic or chapter in the given text that focuses on integration in calculus.</data>
+  <data key="d3">chunk-c817c9e6b2ab27f58115e4ba2e56519e</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Integral Calculus">
+  <data key="d0">Integral Calculus</data>
+  <data key="d1">concept</data>
+  <data key="d2">The topic discussed in the provided text is Integral Calculus, which focuses on the study of integrals and their applications.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Chapter 6: Applications of Integration">
+  <data key="d0">Chapter 6: Applications of Integration</data>
+  <data key="d1">event</data>
+  <data key="d2">Chapter 6 discusses the various applications of integration in mathematics.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Areas between Curves">
+  <data key="d0">Areas between Curves</data>
+  <data key="d1">concept</data>
+  <data key="d2">Areas between curves is a concept within Chapter 6 that involves finding areas under or between curves.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Volumes by Slicing">
+  <data key="d0">Volumes by Slicing</data>
+  <data key="d1">method</data>
+  <data key="d2">Volumes by slicing is a method for determining volumes using slices perpendicular to the plane of revolution.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Volumes of Revolution: Cylindrical Shells">
+  <data key="d0">Volumes of Revolution: Cylindrical Shells</data>
+  <data key="d1">method</data>
+  <data key="d2">Volumes of revolution: cylindrical shells is a method for determining the volume generated by revolving a region around an axis, considering the volume of concentric cylindrical shells.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737828</data>
+  <data key="d6"></data>
+</node>
+<node id="Arc Length of a Curve and Surface Area">
+  <data key="d0">Arc Length of a Curve and Surface Area</data>
+  <data key="d1">concept</data>
+  <data key="d2">Arc length of a curve and surface area are mathematical concepts related to the measurement of lengths and surfaces of curves and surfaces, respectively.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737829</data>
+  <data key="d6"></data>
+</node>
+<node id="Physical Applications">
+  <data key="d0">Physical Applications</data>
+  <data key="d1">event</data>
+  <data key="d2">Physical applications refers to practical uses of mathematical concepts and techniques in various physical domains.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737829</data>
+  <data key="d6"></data>
+</node>
+<node id="Moments and Centers of Mass">
+  <data key="d0">Moments and Centers of Mass</data>
+  <data key="d1">concept</data>
+  <data key="d2">Moments and centers of mass are mathematical concepts used to analyze the distribution of masses or forces around a given axis, which helps in finding the center of mass, equilibrium positions, and rotational motion.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737829</data>
+  <data key="d6"></data>
+</node>
+<node id="Integrals, Exponential Functions, and Logarithms">
+  <data key="d0">Integrals, Exponential Functions, and Logarithms</data>
+  <data key="d1">concept</data>
+  <data key="d2">Integrals, exponential functions, and logarithms are mathematical concepts connected through various relationships and applications.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737829</data>
+  <data key="d6"></data>
+</node>
+<node id="Exponential Growth and Decay">
+  <data key="d0">Exponential Growth and Decay</data>
+  <data key="d1">concept</data>
+  <data key="d2">Exponential growth and decay are mathematical models describing situations where a variable changes at a rate proportional to its current value over time.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737829</data>
+  <data key="d6"></data>
+</node>
+<node id="Calculus of the Hyperbolic Functions">
+  <data key="d0">Calculus of the Hyperbolic Functions</data>
+  <data key="d1">concept</data>
+  <data key="d2">Calculus of hyperbolic functions is a branch of mathematics that deals with the study and manipulation of hyperbolic functions and their derivatives using calculus techniques.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Appendix A: Table of Integrals">
+  <data key="d0">Appendix A: Table of Integrals</data>
+  <data key="d1">data</data>
+  <data key="d2">Appendix A is a table listing various integrals with their corresponding antiderivatives, used as a reference in integral calculations.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Appendix B: Table of Derivatives">
+  <data key="d0">Appendix B: Table of Derivatives</data>
+  <data key="d1">data</data>
+  <data key="d2">Appendix B is a table listing various derivatives with their corresponding functions, used as a reference in derivative calculations.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Appendix C: Review of Pre-Calculus">
+  <data key="d0">Appendix C: Review of Pre-Calculus</data>
+  <data key="d1">content</data>
+  <data key="d2">Appendix C is a review of pre-calculus concepts, helping readers to refresh their knowledge and understand the prerequisites for integral and differential calculus.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Index">
+  <data key="d0">Index</data>
+  <data key="d1">content</data>
+  <data key="d2">The index provides an organized listing of the topics covered in the book, making it easier for readers to locate specific information quickly.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="The World Athletics Federation">
+  <data key="d0">The World Athletics Federation</data>
+  <data key="d1">organization</data>
+  <data key="d2">The governing body responsible for overseeing the World Athletics Championship and validating records.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Carbon-Fiber Spikes Manufacturer">
+  <data key="d0">Carbon-Fiber Spikes Manufacturer</data>
+  <data key="d1">organization</data>
+  <data key="d2">The manufacturer of the carbon-fiber spikes used by Noah Carter during the 100m sprint competition at the World Athletics Championship.</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Noah Carter">
+  <data key="d0">Noah Carter</data>
+  <data key="d3">chunk-7d10ebd4d722ebd6ffbe563b96af5235&lt;SEP&gt;chunk-3bd1a15341e0fba9535b1e66d7550ffa&lt;SEP&gt;chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d2">As a competitive athlete, Noah Carter is represented by the World Athletics Federation.&lt;SEP&gt;Noah Carter's new 100m sprint record was validated by the World Athletics Federation.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Carbon-Fiber Spikes">
+  <data key="d0">Carbon-Fiber Spikes</data>
+  <data key="d3">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d2">The World Athletics Federation sets guidelines and certifies carbon-fiber spikes for use in competitions.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="Book">
+  <data key="d0">Book</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d2">Appendix A provides a table of integrals for easy reference during the course of studying integral calculus.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<node id="World Athletics Championship">
+  <data key="d0">World Athletics Championship</data>
+  <data key="d3">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d2">The World Athletics Federation oversees the World Athletics Championship.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">CalculusVolume1-OP1.pdf</data>
+  <data key="d5">1777737830</data>
+  <data key="d6"></data>
+</node>
+<edge source="Table of Contents" target="Chapter 1: Functions and Graphs">
+  <data key="d7">1.0</data>
+  <data key="d8">Chapter 1 is structured as a part of the Table of Contents.</data>
+  <data key="d9">chapter structure</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Table of Contents" target="Chapter 2: Limits">
+  <data key="d7">1.0</data>
+  <data key="d8">Chapter 2 is structured as a part of the Table of Contents.</data>
+  <data key="d9">chapter structure</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 1: Functions and Graphs" target="1.1 Review of Functions">
+  <data key="d7">1.0</data>
+  <data key="d8">1.1 Review of Functions is a subtopic within Chapter 1.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 1: Functions and Graphs" target="1.2 Basic Classes of Functions">
+  <data key="d7">1.0</data>
+  <data key="d8">1.2 Basic Classes of Functions is a subtopic within Chapter 1.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 1: Functions and Graphs" target="1.3 Trigonometric Functions">
+  <data key="d7">1.0</data>
+  <data key="d8">1.3 Trigonometric Functions is a subtopic within Chapter 1.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 1: Functions and Graphs" target="1.4 Inverse Functions">
+  <data key="d7">1.0</data>
+  <data key="d8">1.4 Inverse Functions is a subtopic within Chapter 1.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 1: Functions and Graphs" target="1.5 Exponential and Logarithmic Functions">
+  <data key="d7">1.0</data>
+  <data key="d8">1.5 Exponential and Logarithmic Functions is a subtopic within Chapter 1.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 2: Limits" target="2.1 A Preview of Calculus">
+  <data key="d7">1.0</data>
+  <data key="d8">2.1 A Preview of Calculus is a subtopic within Chapter 2.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 2: Limits" target="2.2 The Limit of a Function">
+  <data key="d7">1.0</data>
+  <data key="d8">2.2 The Limit of a Function is a subtopic within Chapter 2.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 2: Limits" target="2.3 The Limit Laws">
+  <data key="d7">1.0</data>
+  <data key="d8">2.3 The Limit Laws is a subtopic within Chapter 2.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 2: Limits" target="2.4 Continuity">
+  <data key="d7">1.0</data>
+  <data key="d8">2.4 Continuity is a subtopic within Chapter 2.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 2: Limits" target="2.5 The Precise Definition of a Limit">
+  <data key="d7">1.0</data>
+  <data key="d8">2.5 The Precise Definition of a Limit is a subtopic within Chapter 2.</data>
+  <data key="d9">subtopic</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 3: Derivatives" target="Derivative">
+  <data key="d7">1.0</data>
+  <data key="d8">The derivative is explored in Chapter 3: Derivatives of the text.</data>
+  <data key="d9">concept exploration,mathematical topic</data>
+  <data key="d10">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="World Athletics Federation" target="Noah Carter">
+  <data key="d7">2.0</data>
+  <data key="d8">As a competitive athlete, Noah Carter is represented by the World Athletics Federation.&lt;SEP&gt;Noah Carter's new 100m sprint record was validated by the World Athletics Federation.</data>
+  <data key="d9">affiliation,athlete representation,athletic competition,record validation</data>
+  <data key="d10">chunk-7d10ebd4d722ebd6ffbe563b96af5235&lt;SEP&gt;chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="World Athletics Federation" target="Carbon-Fiber Spikes">
+  <data key="d7">1.0</data>
+  <data key="d8">The World Athletics Federation sets guidelines and certifies carbon-fiber spikes for use in competitions.</data>
+  <data key="d9">certification,equipment regulations</data>
+  <data key="d10">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="World Athletics Federation" target="World Athletics Championship">
+  <data key="d7">1.0</data>
+  <data key="d8">The World Athletics Federation oversees the World Athletics Championship.</data>
+  <data key="d9">event organization,governing body</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 4: Applications of Derivatives" target="Related Rates">
+  <data key="d7">1.0</data>
+  <data key="d8">Related Rates is an application of derivatives discussed in Chapter 4: Applications of Derivatives.</data>
+  <data key="d9">application example,practical problem</data>
+  <data key="d10">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 4: Applications of Derivatives" target="Linear Approximations and Differentials">
+  <data key="d7">1.0</data>
+  <data key="d8">Linear Approximations and Differentials is a method used in Chapter 4: Applications of Derivatives.</data>
+  <data key="d9">approximation technique,method</data>
+  <data key="d10">chunk-3bd1a15341e0fba9535b1e66d7550ffa</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Integral Calculus" target="Chapter 6: Applications of Integration">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter is dedicated to explaining the applications of integral calculus.</data>
+  <data key="d9">course content,subject matter</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Areas between Curves">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of finding areas between curves using integration techniques.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Volumes by Slicing">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of finding volumes by slicing and rotating around an axis.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Volumes of Revolution: Cylindrical Shells">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of finding volumes of revolution using the method of cylindrical shells.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Arc Length of a Curve and Surface Area">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of finding arc length and surface area using integration techniques.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Physical Applications">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of exploring physical applications of integration.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Moments and Centers of Mass">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of finding moments and centers of mass using integration techniques.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Integrals, Exponential Functions, and Logarithms">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of exploring connections between integrals, exponential functions, and logarithms.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Exponential Growth and Decay">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of finding solutions for exponential growth and decay problems using integration techniques.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chapter 6: Applications of Integration" target="Calculus of the Hyperbolic Functions">
+  <data key="d7">1.0</data>
+  <data key="d8">The chapter includes the topic of finding solutions for hyperbolic functions and their derivatives using integration techniques.</data>
+  <data key="d9">integration technique,topic</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Appendix A: Table of Integrals" target="Book">
+  <data key="d7">1.0</data>
+  <data key="d8">Appendix A provides a table of integrals for easy reference during the course of studying integral calculus.</data>
+  <data key="d9">appendix,table</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Appendix B: Table of Derivatives" target="Book">
+  <data key="d7">1.0</data>
+  <data key="d8">Appendix B provides a table of derivatives for easy reference during the course of studying differential calculus.</data>
+  <data key="d9">appendix,table</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Appendix C: Review of Pre-Calculus" target="Book">
+  <data key="d7">1.0</data>
+  <data key="d8">Appendix C is a helpful resource for those who need to brush up on their pre-calculus knowledge before diving into integral and differential calculus.</data>
+  <data key="d9">appendix,review</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Index" target="Book">
+  <data key="d7">1.0</data>
+  <data key="d8">The index aids in organizing and locating various topics covered within the book efficiently.</data>
+  <data key="d9">appendix,organization</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Carbon-Fiber Spikes Manufacturer" target="Noah Carter">
+  <data key="d7">1.0</data>
+  <data key="d8">The carbon-fiber spike manufacturer sponsored Noah Carter and provided him with the advanced sprinting shoes.</data>
+  <data key="d9">athletic sponsor,performance enhancing equipment</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Carbon-Fiber Spikes Manufacturer" target="World Athletics Championship">
+  <data key="d7">1.0</data>
+  <data key="d8">The World Athletics Championship serves as a platform to showcase and promote carbon-fiber spike technology by the manufacturer.</data>
+  <data key="d9">product promotion,sponsorship event</data>
+  <data key="d10">chunk-9c35350257ea665e4c342c1edd9ec6b6</data>
+  <data key="d11">CalculusVolume1-OP1.pdf</data>
+  <data key="d12">1777737830</data>
+  <data key="d13"></data>
+</edge>
+</graph></graphml>

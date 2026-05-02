@@ -1,0 +1,23 @@
+{
+  "doc-3e6a759b65c10d3945771f8036eedcb6": {
+    "status": "processed",
+    "chunks_count": 5,
+    "chunks_list": [
+      "chunk-7d10ebd4d722ebd6ffbe563b96af5235",
+      "chunk-3bd1a15341e0fba9535b1e66d7550ffa",
+      "chunk-c817c9e6b2ab27f58115e4ba2e56519e",
+      "chunk-9c35350257ea665e4c342c1edd9ec6b6",
+      "chunk-6c76f2d7edb4ee3f72db5bba7f334f37"
+    ],
+    "content_summary": "Table of Contents\nPreface  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 1\nChapter 1: Functions and Graphs  .  .  .  .  .  .  .  .  .  .  .  .  ...",
+    "content_length": 7803,
+    "created_at": "2026-05-02T16:01:54.652850+00:00",
+    "updated_at": "2026-05-02T16:03:50.750734+00:00",
+    "file_path": "CalculusVolume1-OP1.pdf",
+    "track_id": "upload_20260502_230154_69b5a4f3",
+    "metadata": {
+      "processing_start_time": 1777737714,
+      "processing_end_time": 1777737830
+    }
+  }
+}

@@ -1,0 +1,12 @@
+
+        LightRAG là một hệ thống Retrieval-Augmented Generation (RAG) đơn giản và nhanh.
+        
+        Các đặc điểm chính:
+        - Xây dựng knowledge graph từ tài liệu
+        - Hỗ trợ nhiều chế độ truy vấn (local, global, hybrid)
+        - Có thể sử dụng với nhiều backend lưu trữ
+        - Tích hợp với các LLM khác nhau
+        
+        LightRAG được phát triển bởi Hong Kong University of Science and Technology.
+        Nó được thiết kế để cải thiện hiệu suất truy xuất thông tin so với RAG truyền thống.
+        
