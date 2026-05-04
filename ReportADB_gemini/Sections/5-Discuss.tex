@@ -1,0 +1,22 @@
+\section{Discussion}
+
+\subsection{Challenges Faced}
+Developing a database-backed RAG assistant using a graph paradigm introduced several practical challenges:
+\begin{itemize}
+    \item \textbf{Shifting from SQL mindset to traversal-first thinking:} the core retrieval logic is ``start from a seed entity and traverse'' rather than ``JOIN tables''. Designing queries as bounded traversals required careful control of depth, candidate explosion, and context size.
+    \item \textbf{Entity identity and merge quality:} extracted entities are noisy (spelling variants, aliases, inconsistent casing). Merging nodes without over-collapsing distinct entities is non-trivial and impacts both precision and explainability.
+    \item \textbf{Provenance representation trade-offs:} keeping provenance as arrays (chunk IDs/file paths) simplifies the prototype, but a production graph DB benefits from explicit \texttt{:Chunk} nodes and \texttt{:MENTIONED\_IN} edges for richer auditability.
+    \item \textbf{Benchmark reproducibility:} LLM-based extraction and translation introduce non-determinism and external latency. We used mock extraction for timing the database/traversal layer, and separate tests for LLM-dependent stages.
+\end{itemize}
+
+\subsection{Future Enhancements}
+Given more time, we would extend the system in the following directions:
+\begin{itemize}
+    \item \textbf{Persist the graph in Neo4j:} enforce constraints on \texttt{:Entity(entity\_id)}, build full-text indices, and move traversal to Cypher for larger datasets.
+    \item \textbf{Add vector retrieval as a complementary index:} integrate FAISS/Milvus for dense similarity search and fuse it with graph traversal for stronger hybrid retrieval.
+    \item \textbf{Incremental updates and caching:} support streaming ingestion, document deletion, and response caching for repeated queries.
+    \item \textbf{Stronger ranking/explainability:} use learned rerankers and expose retrieved paths/subgraphs to users as evidence.
+\end{itemize}
+
+\subsection{Conclusion}
+This project demonstrates that modeling extracted knowledge as a property graph provides a natural and efficient foundation for RAG systems. Compared to a relational design, graph storage simplifies multi-hop retrieval and reduces query and code complexity. The RAG\_Core prototype validates the end-to-end pipeline (ingestion, extraction, graph merge, traversal-based retrieval, and answer generation), and the same data model can be persisted to Neo4j for production-scale workloads.

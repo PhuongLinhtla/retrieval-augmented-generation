@@ -1,0 +1,34 @@
+\setcounter{section}{1}
+\section{Introduction}
+
+\subsection{Project Overview}
+\textbf{Project title:} Graph Database--Enhanced Learning Assistant using Retrieval-Augmented Generation (RAG\_Core).
+
+The project builds a document-grounded learning assistant that supports: (i) ingesting textbooks/notes (plain text, PDF, DOCX via conversion), (ii) transforming documents into structured knowledge, and (iii) answering questions using retrieval plus a Large Language Model (LLM). We implement a simplified LightRAG-style pipeline \cite{guo2024lightrag} with a strong emphasis on a \textit{property graph} as the central database abstraction.
+
+At a high level, the system workflow is:
+\begin{enumerate}
+	\item \textbf{Chunking:} clean and split documents into overlapping chunks.
+	\item \textbf{Extraction:} extract entities and relationships per chunk (LLM-based; mock extractor available for testing).
+	\item \textbf{Graph construction:} merge entities into graph nodes and relations into graph edges with provenance.
+	\item \textbf{Retrieval:} perform keyword search and graph traversal (local/global/hybrid) to build a compact context.
+	\item \textbf{Generation:} ask the LLM to produce an answer grounded in the retrieved graph context.
+\end{enumerate}
+
+\subsection{RDBMS (SQL) Limitations in this Context}
+If MySQL/PostgreSQL were used to store and query the extracted knowledge, the system would face several bottlenecks:
+\begin{itemize}
+	\item \textbf{JOIN-heavy multi-hop retrieval:} RAG questions often require neighborhood expansion and multi-hop reasoning (``A related to B related to C''). In SQL, this quickly becomes recursive CTEs and repeated self-joins, which are harder to optimize and maintain than native graph traversals.
+	\item \textbf{Schema friction under evolving extraction:} entity types and attributes evolve as we add new document domains (e.g., adding \textit{FORMULA}, \textit{METHOD}, or \textit{TECHNOLOGY} entities). In SQL, this often means ALTER TABLE cycles or sparse EAV patterns, increasing complexity and risking performance regressions.
+	\item \textbf{Full-text + semantics integration:} practical RAG retrieval mixes keyword signals (exact terms) with structural evidence (graph connectivity) and optionally vector similarity. Implementing comparable functionality in pure SQL usually requires additional subsystems (external search engine + custom ranking) and more glue code.
+	\item \textbf{Developer complexity:} representing provenance (chunk IDs, file paths) and edge-level metadata (keywords, weights) across many association tables leads to verbose queries and brittle application logic.
+\end{itemize}
+
+\subsection{Rationale for Technology Choice}
+We choose a \textbf{graph database model (property graph)} as the primary data management paradigm because it matches the extracted knowledge structure natively:
+\begin{itemize}
+	\item \textbf{Natural representation:} entities map to nodes; relationships map to edges; both carry flexible properties (type, description, keywords, weight, provenance).
+	\item \textbf{Efficient traversal:} ``local'' retrieval is a bounded traversal around seed entities; ``global'' retrieval aggregates across broader neighborhoods. These are first-class operations in graph engines.
+	\item \textbf{Schema flexibility:} adding new properties (e.g., confidence, timestamps, source counts) does not require schema migrations typical of relational systems.
+	\item \textbf{Production path:} although RAG\_Core stores the graph in-memory for the prototype, the same node/edge model maps directly to Neo4j labels and relationships, enabling persistent storage, indexing, and scale-out when needed.
+\end{itemize}

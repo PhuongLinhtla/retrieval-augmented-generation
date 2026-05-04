@@ -1,0 +1,33 @@
+# RAG Core Requirements
+# Minimal dependencies - uses Python standard library
+
+# Runtime dependencies
+flask>=3.0.0
+
+# For LLM integration (optional)
+# openai>=0.27.0
+# ollama
+
+# For vector database support (optional)
+# faiss-cpu>=1.7.0
+# milvus-lite>=2.0.0
+
+# For graph database support (optional)
+# neo4j>=5.0.0
+
+# For development & testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+
+# Optional / recommended for PDF + OCR + Math extraction
+PyMuPDF>=1.22.0  # fitz
+pytesseract>=0.3.10
+Pillow>=9.0.0
+requests>=2.28.0

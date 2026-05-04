@@ -1,0 +1,109 @@
+\begin{titlepage}
+\begin{center}
+NATIONAL ECONOMICS UNIVERSITY, HANOI \\
+COLLEGE OF TECHNOLOGY \\
+FACULTY OF DATA SCIENCE AND ARTIFICIAL INTELLIGENCE
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=4cm]{Images/NEU logo.png}
+\end{center}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{c}
+\multicolumn{1}{c}{\textbf{{\LARGE ADVANCED DATABASES}}}\\
+~~\\
+\\
+\hline
+\\
+\multicolumn{1}{c}{\textbf{{\Large PROJECT REPORT}}}\\
+\\
+\textbf{{\Huge Project Title: }}\\
+\textbf{{\Large Graph Database--Enhanced Learning Assistant}}\\
+\textbf{{\Large using Retrieval-Augmented Generation (RAG\_Core)}}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\begin{table}[h]
+\begin{tabular}{rrll}
+\hspace{4.8 cm} & Supervisor: & \textbf{Tran Quang Toan} &\\
+~~\\
+& Students: & \textbf{Nguyen Son Hai} & \textbf{11247282} \\
+& & \textbf{Hoang Thi Phuong Linh} & \textbf{11247308} \\
+~~\\
+& Class: & \textbf{AI66B} & \\
+& Group: & \textbf{9} & \\
+\end{tabular}
+\end{table}
+
+\vspace{2cm}
+
+\begin{center}
+{\footnotesize Hanoi, May 2026}
+\end{center}
+
+\end{titlepage}
+
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+This project builds a learning assistant that answers academic questions from user documents using a graph-database-oriented Retrieval-Augmented Generation (RAG) pipeline. Instead of storing extracted knowledge in relational tables, we model it as a property graph: entities become nodes and semantic relations become edges with weights, keywords, and provenance (chunk IDs and file paths). The system (RAG\_Core) cleans and chunks documents, extracts entities/relations with an LLM (or a mock extractor for testing), merges duplicates, and supports keyword search, depth-limited neighborhood expansion, and multi-hop path finding. A Flask WebUI demonstrates end-to-end ingestion, graph construction, and hybrid question answering with an optional Vietnamese$\leftrightarrow$English translation layer (ALMA-13B via Ollama). Experiments show fast interactive retrieval on thousands of nodes and highlight how graph traversal reduces JOIN-heavy complexity compared to SQL. The design maps directly to Neo4j/Cypher for persistent storage and scale-out.
+
+\noindent\textbf{GitHub Repository:}\\
+\url{https://github.com/PhuongLinhtla/retrieval-augmented-generation}
+
+\section*{Rubric-to-Section Mapping}
+\addcontentsline{toc}{section}{Rubric-to-Section Mapping}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{7.2cm}|p{6.0cm}|}
+\hline
+\textbf{Requirement (Rubric)} & \textbf{Where to Find It} \\
+\hline
+Title page, members, supervisor & Section 1 \\
+\hline
+Abstract ($\approx$150 words) & Abstract (Section 1) \\
+\hline
+Project overview & Section 2.1 \\
+\hline
+RDBMS (SQL) limitations analysis & Section 2.2 \\
+\hline
+Rationale for chosen DB technology (Graph DB) & Section 2.3 \\
+\hline
+Query-driven design (primary read/write ops) & Section 3.1.1 \\
+\hline
+Graph data model (nodes/relationships/properties) & Section 3.1.2 \\
+\hline
+System architecture diagram (Frontend$\rightarrow$Backend$\rightarrow$DB) & Section 3.2.1 \\
+\hline
+DB-specific query/code snippets (graph traversal, indexing) & Section 3.2.2 \\
+\hline
+Advanced features implementation & Section 3.3 \\
+\hline
+Working application screenshots & Section 4.1 \\
+\hline
+UI-to-Database mapping analysis & Section 4.2 \\
+\hline
+Performance evaluation (response time benchmarks) & Section 4.3 \\
+\hline
+Challenges faced & Section 5.1 \\
+\hline
+Future enhancements & Section 5.2 \\
+\hline
+Conclusion & Section 5.3 \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\tableofcontents
+\newpage

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG Core WebUI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <main class="page">
+    <header class="hero">
+      <p class="badge">RAG_Core</p>
+      <h1>Knowledge Graph Studio</h1>
+      <p class="subtitle">Paste a document, run extraction, inspect entities and query the graph in one place.</p>
+    </header>
+
+    <section class="card form-card">
+      <form method="post" enctype="multipart/form-data">
+        <div class="grid two">
+          <label>
+            Source Name
+            <input type="text" name="source_name" value="{{ form_values.source_name }}" placeholder="paper_notes.txt">
+          </label>
+          <label>
+            Upload File
+            <input type="file" name="text_file" accept=".txt,.md,.rst,.log,.text,.pdf">
+          </label>
+        </div>
+
+        <label>
+          Input Text
+          <textarea name="text" rows="12" placeholder="Paste your content here...">{{ form_values.text }}</textarea>
+        </label>
+
+        <div class="grid five">
+          <label>Chunk Size
+            <input type="number" name="chunk_size" min="64" max="4000" value="{{ form_values.chunk_size }}">
+          </label>
+          <label>Chunk Overlap
+            <input type="number" name="chunk_overlap" min="0" max="2000" value="{{ form_values.chunk_overlap }}">
+          </label>
+          <label>Top K
+            <input type="number" name="top_k" min="1" max="50" value="{{ form_values.top_k }}">
+          </label>
+          <label>Max Depth
+            <input type="number" name="max_depth" min="1" max="4" value="{{ form_values.max_depth }}">
+          </label>
+          <label>
+            Query Mode
+            <select name="query_mode">
+              <option value="naive" {% if form_values.query_mode=='naive' %}selected{% endif %}>Naive</option>
+              <option value="local" {% if form_values.query_mode=='local' %}selected{% endif %}>Local</option>
+              <option value="global" {% if form_values.query_mode=='global' %}selected{% endif %}>Global</option>
+              <option value="hybrid" {% if form_values.query_mode=='hybrid' %}selected{% endif %}>Hybrid (LightRAG
+                Default)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid two">
+          <label>
+            Similarity Threshold
+            <input type="number" step="0.05" min="0" max="1" name="similarity_threshold"
+              value="{{ form_values.similarity_threshold }}">
+          </label>
+          <label>
+            Keyword Query
+            <input type="text" name="keyword_query" value="{{ form_values.keyword_query }}"
+              placeholder="Apple, diabetes, MRI...">
+          </label>
+          <label>
+            Entity Query
+            <input type="text" name="entity_query" value="{{ form_values.entity_query }}" placeholder="Exact entity id">
+          </label>
+        </div>
+
+        <label>
+          Ask a Question (LLM)
+          <textarea name="nl_question" rows="2"
+            placeholder="What is the main topic of this document?">{{ form_values.nl_question }}</textarea>
+        </label>
+
+        <button class="btn" type="submit">Run Pipeline</button>
+      </form>
+    </section>
+
+    {% if error %}
+    <section class="card error">
+      <h2>Pipeline Error</h2>
+      <p>{{ error }}</p>
+    </section>
+    {% endif %}
+
+    {% if output %}
+    <section class="stats-grid">
+      <article class="card stat">
+        <h3>Text Length</h3>
+        <p>{{ output.text_length }}</p>
+      </article>
+      <article class="card stat">
+        <h3>Chunks</h3>
+        <p>{{ output.chunk_count }}</p>
+      </article>
+      <article class="card stat">
+        <h3>Entities</h3>
+        <p>{{ output.stats.num_nodes }}</p>
+      </article>
+      <article class="card stat">
+        <h3>Relations</h3>
+        <p>{{ output.stats.num_edges }}</p>
+      </article>
+      <article class="card stat">
+        <h3>Density</h3>
+        <p>{{ '%.4f'|format(output.stats.density) }}</p>
+      </article>
+      <article class="card stat">
+        <h3>Avg Degree</h3>
+        <p>{{ '%.2f'|format(output.stats.avg_degree) }}</p>
+      </article>
+    </section>
+
+    {% if output.llm_answer %}
+    <section class="card answer-card" style="border-left: 4px solid #007bff; background: rgba(0, 123, 255, 0.05);">
+      <h2>LLM Answer</h2>
+      <div class="answer-content" style="padding: 15px; font-size: 1.1em; line-height: 1.6;">
+        <p>{{ output.llm_answer }}</p>
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="card">
+      <h2>Chunk Preview</h2>
+      <div class="list">
+        {% for chunk in output.chunks[:8] %}
+        <article class="row">
+          <h4>{{ chunk.chunk_id }} <span>{{ chunk.tokens }} tokens</span></h4>
+          <p>{{ chunk.content[:240] }}{% if chunk.content|length > 240 %}...{% endif %}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if output.formulas %}
+    <section class="card">
+      <h2>Extracted Formulas</h2>
+      <div class="list">
+        {% for f in output.formulas %}
+        <article class="row compact">
+          <h4>Page {{ f.page }}</h4>
+          <p class="formula">\[ {{ f.latex }} \]</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="card">
+      <h2>Entities</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Sources</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for entity in output.entity_rows %}
+            <tr>
+              <td>{{ entity.entity_id }}</td>
+              <td>{{ entity.entity_type }}</td>
+              <td>{{ entity.description[:160] }}{% if entity.description|length > 160 %}...{% endif %}</td>
+              <td>{{ entity.source_count }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Relations</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Target</th>
+              <th>Keywords</th>
+              <th>Weight</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for rel in output.relation_rows %}
+            <tr>
+              <td>{{ rel.src }}</td>
+              <td>{{ rel.tgt }}</td>
+              <td>{{ rel.keywords }}</td>
+              <td>{{ rel.weight }}</td>
+              <td>{{ rel.description[:150] }}{% if rel.description|length > 150 %}...{% endif %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {% if output.keyword_query %}
+    <section class="card">
+      <h2>Keyword Search: {{ output.keyword_query }}</h2>
+      <div class="list">
+        {% if output.keyword_results %}
+        {% for entity_id, score in output.keyword_results %}
+        <article class="row compact">
+          <h4>{{ entity_id }}</h4>
+          <p>score: {{ '%.4f'|format(score) }}</p>
+        </article>
+        {% endfor %}
+        {% else %}
+        <p class="muted">No keyword matches found.</p>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if output.entity_query %}
+    <section class="card">
+      <h2>Entity Neighborhood: {{ output.entity_query }}</h2>
+      {% if output.entity_result and output.entity_result.nodes %}
+      <p class="muted">Nodes: {{ output.entity_result.nodes|length }} | Edges: {{ output.entity_result.edges|length }}
+      </p>
+      <div class="list">
+        {% for node in output.entity_result.nodes %}
+        <article class="row compact">
+          <h4>{{ node.entity_id }}</h4>
+          <p>{{ node.entity_type }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="muted">Entity not found in graph.</p>
+      {% endif %}
+    </section>
+    {% endif %}
+
+    <section class="card">
+      <h2>Most Connected</h2>
+      <div class="list">
+        {% for item in output.stats.most_connected %}
+        <article class="row compact">
+          <h4>{{ item.entity_id }}</h4>
+          <p>{{ item.degree }} links</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </main>
+</body>
+
+</html>
